@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* El tamaño de la caja ya no se ve afectado por el padding es absoluto Las propiedades width y height incluyen el borde y relleno.*/
+    font-family: 'Madimi One';
+}
+
+body{
+    min-height: 100vh; /* vh es la unidad de altura de la ventana gráfica representa un porcentaje de la altura de la ventana gráfica. 50vh significa el 50% de la altura de la ventana gráfica.*/
+    background: linear-gradient( #000000 50%, #2227af) /*Transicion progresiva entre uno o mas colores es un tipo de <img> */
+}
+
+header{
+    width: 100%;
+    padding: 30px 100px; /*arriba/abajo   y   derecha/izquierda en relacion con la ventana*/
+    display:flex; /*especifica si un elemento es tratado como block or inline element. dimensiones flexibles en un eje*/
+    justify-content: space-between; /*Esta propiedad define la alineación de los ítems a lo largo del eje principal. Ayuda a distribuir el espacio libre que queda en el contenedor, ya sea que todos los flex ítems de una línea sean inflexibles o flexibles, pero ya hayan alcanzado su tamaño máximo. También ejerce cierto control sobre la alineación de los ítems cuando sobrepasan el límite de la línea.*/
+}
+
+header .logo{ /*debe ir un espacio despues de la etiqueta padre*/
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2em;
+    color: white;
+}
+
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center; /*valor de todos los hijos directos como grupo. En Flexbox, controla la alineación de elementos en el eje transversal (vertical) */
+}
+
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    padding: 6px 15px; /*arriba/abajo   y   derecha/izquierda*/
+}
+
+header ul li a:hover, header ul li a.activo {
+    background-color: hwb(261 9% 63%);
+    color: white;
+}
+
+section{
+    justify-content: space-around;
+    width: 100%;
+    display:flex;
+    align-items: center;
+}
+
+section img{
+    height: 100%;
+    width: 50%;
+    mix-blend-mode: screen; /*establece cómo el contenido de un elemento debe combinarse con el contenido del elemento principal y el fondo del elemento*/
+}
+
+#presentacion{
+    background-color: hwb(260 9% 22%);
+    border-radius: 20px;
+    border: #000000ff 5px solid;
+    padding: 15px 10px;
+    text-align: center;
+    color:white;
+    box-shadow: 0px 0px 10px 15px #440A67;
+    animation: letrero 1.5s linear infinite;
+    animation-direction: alternate-reverse; 
+}
+
+.parciales{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+}
+
+@keyframes letrero { /*se puede poner tiempo o en porcentaje */ 
+    0%   {box-shadow: 0px 0px 10px 10px #440A67}
+    25%  {box-shadow: 0px 0px 10px 10px #93329E}
+    50%  {box-shadow: 0px 0px 10px 10px #B4AEE8}
+    75%  {box-shadow: 0px 0px 10px 10px #FFE3FE}
+    100% {box-shadow: 0px 0px 10px 10px #461959}
+}
+
+.parciales h1{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    position: relative;
+}
+
+.boton{
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+    border-color: black;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    color: white;
+    transition: all 0.8s;
+    font-size: 20px;
+    background: black;
+}
+
+.boton1{
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+    border-color:white;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    color: black;
+    transition: all 0.8s;
+    font-size: 20px;
+    background: white;
+}
+
+
+.p{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    width: 100vw;
+    height: 100%;
+}
+
+.actividadp1{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    margin: 10px;
+    padding: 30px;
+    width: 400px;
+    height: 100%;
+    border: solid 2px rgb(0, 240, 0);
+    border-radius: 25px;
+    transition: all 1s;
+}
+
+.actividadp1:hover {
+    box-shadow: 0px 0px 5px 5px white;
+    background-color: #000000;
+    background-image: url(galaxy.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+.actividadp2{
+    background-color:rgba(255, 244, 95, 0.136);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    margin: 10px;
+    padding: 30px;
+    width: 400px;
+    height: 100%;
+    border: solid 2px rgb(0, 240, 0);
+    border-radius: 25px;
+    transition: all 0.5s;
+}
+
+.actividadp2:hover {
+    box-shadow: 0px 0px 5px 5px white;
+    background-image: url(platillo.png);
+    background-size: 100%;
+    color: black;
+}
+
+.dibujo1, .dibujo2{
+    margin: 15px;
+    display: inline-block;
+    justify-content: center;
+    width: 50%;
+    height: 200px;
+}
+
+.dibujo2:hover{
+    margin: 15px;
+    display: inline-block;
+    justify-content: center;
+    width: 50%;
+    height: 200px;
+    animation: alien 5s linear infinite;
+}
+
+.dibujo1:hover{
+    margin: 15px;
+    display: inline-block;
+    justify-content: center;
+    width: 50%;
+    height: 200px;
+    animation: cohete 0.06s alternate-reverse infinite;
+}
+
+@keyframes alien { /*se puede poner tiempo o en porcentaje */
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cohete { /*se puede poner tiempo o en porcentaje */
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(5deg);
+    }
+}
