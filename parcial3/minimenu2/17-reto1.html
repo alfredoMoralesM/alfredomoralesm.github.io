@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>Ejercicio 17 Reto 1</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    
+    <div id="myPlot" style="width:100%;max-width:700px"></div>
+
+    <form id="myform" onsubmit="return graficar();"> <!--onsubmit es el evento cuando se oprime el boton submit-->
+        <p>Inicio <input id="inicio" name="inicio" type="text"/></p> <!--ID y name llamarlos de la misma manera-->
+        <p>Fin <input id="fin" name="fin" type="text"/></p>
+        <p><input type="submit"/></p>
+    </form>
+    
+    <script>
+
+        function graficar() {  /*Var Aquí entramos al form en posicion 0, la variable veces y extraer el valor*/
+            var inicio= parseInt(document.forms[0].inicio.value);/*ParseInt lo que estpoy recibiendo lo transformo en entero*/
+            var fin= parseInt(document.forms[0].fin.value);
+
+            if(inicio!=fin && fin>inicio){
+                let exp = "Math.sin(x)"; //variable que indica que formula vamos a utilizar
+
+                // Generate values
+                const xValues = [];
+                const yValues = [];
+                
+                for (let x = inicio; x <= fin; x += 0.1) {
+                xValues.push(x); //el incremento en de 0.1 que aumenta hasta 10 en el ciclo for 
+                yValues.push(eval(exp)); //evalúa la formúla matematica
+                } 
+                
+                // Display using Plotly
+                const data = [{x:xValues, y:yValues, mode:"lines"}]; //construtir el dato, y el modo en que lo va a construir es lineal 
+                const layout = {title: "y = " + exp}; //concatena dos cadenas
+                Plotly.newPlot("myPlot", data, layout); //metodo new plot(en que lugar, los datos, y el layout)
+                return false;
+            }
+            else{
+                document.write("Ingresa los datos correctos<br>->El inicio no debe ser el mismo que el final<br>->el final debe ser mayor al inicio");
+                return true;
+            } 
+        }     
+        
+        </script>
+    
+</body>
+</html>
