@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>Bienvenida del usuario</title>
+  <style>
+    p{
+      color: green;
+    } 
+  </style>
+  <script type = "text/javascript">
+  function alertName() {  /*Var Aquí entramos al form en posicion 0, la variable veces y extraer el valor*/
+    var filas= parseInt(document.forms[0].fila.value);/*ParseInt lo que estpoy recibiendo lo transformo en entero*/
+    var columnas= parseInt(document.forms[0].colum.value);
+    var aleatorio=0;
+    
+    document.write("<table border=1");
+    for(i=1;i<=filas;i++)
+        {
+                document.write("<tr>");
+                for(j=0; j<columnas;j++){
+                aleatorio = Math.floor(Math.random()*100)+1;
+                document.write("<td>", aleatorio,"</td>");        
+            }
+        document.write("</tr>"); /*Document.write escribe en el documento directamente puedes insertar un html completo*/
+        } /*desventaja quita todo el demas contenido para eso es getelement.id*/
+        document.write("</table");
+    
+    return true;
+  }
+  </script>
+</head>
+<body>
+    <!--Este es un solo form porque esta dentro de el mismo-->
+    <form id="myform" onsubmit="return alertName();"> <!--onsubmit es el evento cuando se oprime el boton submit-->
+    <p># filas <input id="fila" name="fila" type="text"/></p> <!--ID y name llamarlos de la misma manera-->
+    <p># columnas <input id="colum" name="colum" type="text"/></p>
+    <p><input type="submit"/></p>
+    </form>
+</body>
+</html>

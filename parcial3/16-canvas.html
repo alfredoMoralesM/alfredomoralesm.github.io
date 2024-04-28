@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<body>
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas> <!--se dibuja automaticamente en el contenedor-->
+
+<script>
+
+    //el limite inferior de la grafica es el menor valor
+
+const xValues = ["PROGRAMACION I", "MATEMATICAS I", "FISICA I", "PROGRAMACION WEB", "NUCLEO GENERAL II", "INGLES IV"];
+const yValues = [0,0,0,0,0,0];
+
+for(let i=0; i<6; i++){
+    yValues[i]= Math.floor(Math.random()*10)+1;
+}
+
+
+const barColors = ["rgba(0,0,255,0.6)", "green","blue","orange","brown", "yellow"]; //tercer arreglo para definir los colores de cada barra puede ser con una escala/hexadecimal/nombre
+
+new Chart("myChart", { //esta funcion es diferente de ploty en chart si necesita un canva
+
+    type: "bar",
+
+ data: {  //datos para darle color de fondo y los valores del eje x/y
+    labels: xValues,
+    datasets: [{
+    backgroundColor: barColors,
+    data: yValues
+  }]
+ },
+
+ options: { //opciones si se apaga o se enciende la leyenda de la gráfica
+    legend: {display: false},
+    title: {
+    display: true,
+    text: "World Wine Production 2018"
+  }
+ }
+}); 
+
+</script>
+
+</body>
+
+</html>

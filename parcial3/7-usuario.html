@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Bienvenida del usuario</title>
+  <style>
+    p{
+      color: green;
+    } 
+  </style>
+  <script type = "text/javascript">
+  function alertName() {  /*Var Aquí entramos al form en posicion 0, la variable veces y extraer el valor*/
+    var usuario= (document.forms[0].usuario.value);/*ParseInt lo que estpoy recibiendo lo transformo en entero*/
+    var contra= (document.forms[0].contra.value);
+    
+    if(usuario=="admin" && contra=="admin"){
+      document.write("Acceso Permitido");
+      document.write("<a href='https://alfredomoralesm.github.io'><br>Portafolio</a>");         
+    }
+    else{
+        document.write("Acceso denegado"); 
+        document.write("<a href='ejercicio3c.html'><br>Regresar a validar</a>");
+    }
+
+
+    
+    return true;
+  }
+  </script>
+</head>
+<body>
+    <!--Este es un solo form porque esta dentro de el mismo-->
+    <form id="myform" onsubmit="return alertName();"> <!--onsubmit es el evento cuando se oprime el boton submit-->
+    <p>Ingresa el usuario <input id="usuario" name="usuario" type="text"/></p> <!--ID y name llamarlos de la misma manera-->
+    <p>Ingresa la contraseña <input id="contra" name="contra" type="password"/></p>
+    <p><input type="submit"/></p>
+    </form>
+</body>
+</html>

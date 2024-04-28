@@ -1,0 +1,31 @@
+<html>
+
+<head>
+
+  <title>Bienvenida del usuario</title>
+  <style>
+    p{
+      color: rgb(12, 138, 12);
+    }
+    
+  </style>
+  <script type = "text/javascript">
+  function alertName() {  /*Var Aquí entramos al form en posicion 0, la variable veces y extraer el valor*/
+    var veces1= parseInt(document.forms[0].veces.value);/*ParseInt lo que estpoy recibiendo lo transformo en entero*/
+    for(i=1;i<=veces1;i++)
+        {
+        document.write("<p>Este es un párrafo</p>"); /*Document.write escribe en el documento directamente puedes insertar un html completo*/
+        } /*desventaja quita todo el demas contenido para eso es getelement.id*/
+    return true;
+  }
+  </script>
+</head>
+
+<body>
+    <form id="myform" onsubmit="return alertName();"> <!--onsubmit es el evento cuando se oprime el boton submit-->
+    <p>Cuantos parráfos <input id="veces" name="veces" type="text"/></p> <!--ID y name llamarlos de la misma manera-->
+    <p><input type="submit"/></p>
+    </form>
+</body>
+
+</html>

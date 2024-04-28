@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<body>
+
+<div id="myPlot" style="width:100%;max-width:700px"></div>
+
+<script>
+
+//let exp = "Math.sen(x)"; //variable que indica que formula vamos a utilizar
+
+let exp = "Math.pow(x,2)";
+
+
+// Generate values
+const xValues = [];
+const yValues = [];
+
+for (let x = -10; x <= 10; x += 0.1) {
+ xValues.push(x); //el incremento en de 0.1 que aumenta hasta 10 en el ciclo for 
+ yValues.push(eval(exp)); //evalúa la formúla matematica
+} 
+
+// Display using Plotly
+const data = [{x:xValues, y:yValues, mode:"lines"}]; //construtir el dato, y el modo en que lo va a construir es lineal 
+const layout = {title: "y = " + exp}; //concatena dos cadenas
+Plotly.newPlot("myPlot", data, layout); //metodo new plot(en que lugar, los datos, y el layout)
+</script>
+
+</body>
+
+</html>

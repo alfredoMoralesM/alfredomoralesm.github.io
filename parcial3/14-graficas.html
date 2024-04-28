@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<body>
+
+    <div id="myPlot" style="width:100%;max-width:700px"></div>
+
+    <div id="myPlot2" style="width:100%;max-width:700px"></div>
+
+    <div id="myPlot3" style="width:100%;max-width:700px"></div>
+
+        <script>
+
+            const xArray = ["PROGRAMACION I", "MATEMATICAS I", "FISICA I", "PROGRAMACION WEB", "NUCLEO GENERAL II", "INGLES IV"]; /*arreglo eje x*/
+            const yArray = [9.3, 10, 9.5, 10, 10, 9.5];
+            const yArray2 = [9.5, 10, 10, 9.5, 10, 9.5];
+
+            yArray3= [0,0,0,0,0,0];
+            
+            for(var i=0; i<6;i++){
+               yArray3[i] = Math.floor(Math.random()*10)+1;     
+            }
+            
+
+            const data = [{ /*estructura data*/
+            x:xArray,
+            y:yArray,
+            type:"bar", /*tipo de barra*/
+
+            orientation:"v", /*orientacion de la grafica*/
+            marker: {color:"rgba(0,0,255,0.6)"} 
+            }];
+
+            const data2 = [{ /*estructura data*/
+            x:xArray,
+            y:yArray2,
+            type:"bar", /*tipo de barra*/
+
+            orientation:"v", /*orientacion de la grafica*/
+            marker: {color:"rgba(0,255,0,0.6)"} 
+            }];
+
+            const data3 = [{ /*estructura data*/
+            x:xArray,
+            y:yArray3,
+            type:"bar", /*tipo de barra*/
+
+            orientation:"v", /*orientacion de la grafica*/
+            marker: {color:"rgba(255,0,0,0.6)"} 
+            }];
+            
+            const layout = {title:"RENDIMIENTO PARCIAL I"};
+            const layout2 = {title:"RENDIMIENTO PARCIAL II"};
+            const layout3= {title:"RENDIMIENTO PARCIAL III. PREDICCION"};
+
+Plotly.newPlot("myPlot", data, layout);/* argumentos: donde se coloca, los datos que se colocaran, aspectos adicionales en este caso el titulo*/
+Plotly.newPlot("myPlot2", data2, layout2);/* argumentos: donde se coloca, los datos que se colocaran, aspectos adicionales en este caso el titulo*/
+Plotly.newPlot("myPlot3", data3, layout3);
+
+</script>
+
+</body>
+
+</html>
