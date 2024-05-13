@@ -1,0 +1,118 @@
+h1{
+  text-align: center; 
+  font-family: Comic Sans MS; 
+  font-weight:bold; 
+  font-size: 50px; 
+  color: #EBD758; 
+  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68;
+}
+
+
+.click{
+  text-align: center;
+  text-decoration:underline  wavy  rgb(230, 234, 3);
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+#demo{
+  display: block;
+  margin: 100px;
+  text-align: center;
+}
+
+
+a{
+  background-color: hwb(0 0% 100%);
+  border-radius: 20px;
+  border: none;
+  text-decoration: none;
+  padding: 15px 10px;
+  text-align: center;
+  color: white;
+  animation: letrero 0.5s linear infinite;
+}
+
+@keyframes letrero { /*se puede poner tiempo o en porcentaje */ 
+  to{box-shadow: 0px 0px 10px 10px #ddff00;}
+}
+
+button.semana1 {
+    margin:10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 120px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  button.semana2 {
+    margin:10px;
+    padding: 10px 20px;
+    background-color: #4176c1;
+    color: white;
+    border: none;
+    border-radius: 120px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  button.semana3 {
+    margin:10px;
+    padding: 10px 20px;
+    background-color: #a52bdd;
+    color: white;
+    border: none;
+    border-radius: 120px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  button.semana4 {
+    margin:10px;
+    padding: 10px 20px;
+    background-color: #d1d40f;
+    color: black;
+    border: none;
+    border-radius: 120px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  button.semana1:hover {
+    background-color: #45a049;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  button.semana1:active {
+    background-color: #3e8e41;
+  }
+
+  button.semana2:hover {
+    background-color: #1958b0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  button.semana2:active {
+    background-color: #17558c;
+  }
+
+  button.semana3:hover {
+    background-color: #a52bdd;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  button.semana3:active {
+    background-color: #7100a5;
+  }
+
+  button.semana4:hover {
+    background-color: #d1d40f;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  button.semana4:active {
+    background-color: rgb(161, 163, 16);
+  }
