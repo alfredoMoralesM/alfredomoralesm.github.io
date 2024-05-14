@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Cabin+Sketch);
+@import url(https://fonts.googleapis.com/css?family=Gabriela);
+
+
+h1{
+    color: chocolate;
+    font-family: 'Cabin Sketch';
+    font-size: 50px;
+
+}
+h2{
+    color: blue;
+    font-family: 'Cabin Sketch';
+    font-size: 20px;
+
+}
+
+img{
+    width: 150px;
+    height: 150px;
+}
+
+body{
+    background-image: url(.././media/fondo.jpg);
+    text-align: center;
+    background-color: black;
+}
+
+div.estrofa{
+    width: 500px;
+    height: auto;
+    border: hwb(202 11% 22%) 3px solid;
+    border-radius: 20px 20px 20px 20px;
+    margin: 10px 50px;
+    background-color: hwb(235 40% 0%);
+    color: white;
+    font-family: 'Gabriela';
+}
+
+div.estribillo{
+    width: 500px;
+    height: auto;
+    border: hwb(276 11% 14%) 3px solid;
+    border-radius: 20px 20px 20px 20px;
+    margin: 10px 50px;
+    background-color: hwb(199 28% 6%);
+    color: white;
+    font-family: 'Gabriela'
+}
