@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Angkor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Angkor&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Angkor&family=Bebas+Neue&family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+body {
+  padding: 0 50px;
+  background-color: hwb(106 53% 15%);
+  font-family: 'Oswald';
+  text-align: justify;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Angkor";
+  font-size: 3rem;
+  text-align: center;
+  text-shadow:  1px 1px 2px black,
+  0 0 2em rgb(225, 232, 14),
+  0 0 0.5em rgb(44, 221, 16);
+  color: rgb(255, 255, 255);
+}
+
+h2 {
+  margin: 0;
+  color:hwb(140 2% 96%);
+  font-family: "Bebas Neue";
+  font-size: 3rem;
+  text-transform: capitalize;
+  text-shadow: 3px 3px rgb(110, 254, 0);
+}
+
+strong {
+  padding: 0 10px;
+  background-color: white;
+  color: red;
+}
+
+i {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+time {
+  color: blue;
+}
+
+img {
+  border: hwb(180 1% 98%) 5px solid;
+  padding: 5px;
+}
+
+img.izquierda {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+img.derecha {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+p.izquierda {
+  float: left;
+  width: 33%;
+}
+
+p.centrado {
+  text-align: center;
+}
+
+hr {
+  clear: both;
+  width: 66%;
+  height: 10px;
+  border: black 1px solid;
+  border-radius: 5px;
+  margin: 40px auto;
+  background-color: hwb(95 0% 32%);
+}
+
+address {
+  text-align: right;
+  font-style: normal;
+}
