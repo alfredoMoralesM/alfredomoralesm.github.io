@@ -1,0 +1,44 @@
+
+*{
+  color:black;
+}
+
+.naranja{
+  margin: 20px;
+  width: 100%;
+  border: hwb(27 6% 15%) 3px solid;
+}
+
+.cita1{
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  background-color: hsl(48, 89%, 50%);
+}
+
+.cita2{
+  padding: 5px;
+  margin: 5px;
+  text-align: end;
+  background-color:  hsla(48, 90%, 31%, 0.644);
+}
+
+.purpura{
+  margin: 20px;
+  width: 100%;
+  border:  hwb(261 13% 47%) 3px solid;
+}
+
+.cita3{ 
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  background-color:  hsl(60, 3%, 39%);
+}
+
+.cita4{
+  padding: 5px;
+  margin: 5px;
+  text-align: end;
+  background-color:  hsla(269, 59%, 56%, 0.795);
+}
