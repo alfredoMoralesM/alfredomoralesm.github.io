@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  position: relative; /*respeta lo que hay alrededor*/
+  animation: example 2s linear infinite;
+  /*animation-duration: 4s; /*duracion de toda la animacion
+  animation-delay: 2s;*/
+}
+
+@keyframes example { /*se puede poner tiempo o en porcentaje */
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+    0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
+
+}
+
+
+</style>
+</head>
+<body>
+
+<h1>CSS Animation</h1>
+
+<p>The animation-delay property specifies a delay for the start of an animation. The following example has a 2 seconds delay before starting the animation:</p>
+
+<div>
+    <img src="Planeta-tierra.jpg" width="100px" height="100px" >
+</div>
+
+</body>
+</html>
+
+

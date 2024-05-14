@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación Tarea</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .camino{
+            background-color: brown;
+            width: 100%;
+            height: 150px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .camino::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, white, white 50%, 
+            transparent 50%, transparent 100% );
+            background-size: 50px;
+            animation: mediocamino 0.125s linear infinite;
+        }
+
+        @keyframes mediocamino {
+            0%{
+                background-position: 50px;
+            }
+
+            100%{
+                background-position: 0;
+            }
+        }
+
+        .carro{
+            position: absolute;
+            left: 10px;
+            bottom: -35px;
+            width: 200px;
+            height: 250px;
+            border-radius: 10px;
+            animation: vuelta 5s infinite alternate-reverse;
+            transform: rotate(180deg);
+        }
+
+        
+        @keyframes vuelta {
+            0%{
+                left: 10px;
+                bottom: -35px;
+            }
+
+            50%{
+                left: 20px;
+                bottom: 30px;
+            }
+
+            75%{
+                left: 500px;
+                bottom: 30px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="camino">
+        <div class="carro">
+            <img src="taxi-removebg-preview.png" height="150px" width="150px">
+        </div>
+    
+    </div>
+</body>
+</html>
