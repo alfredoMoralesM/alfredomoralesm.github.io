@@ -1,0 +1,58 @@
+html {
+    background-color: hwb(150 25% 30%);
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 125%;
+    text-align: left;
+    hyphens: auto;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+article {
+    display: flex;
+    width: 450px;
+    margin: 10px;
+    border: rgba(1, 77, 24, 0.988) 3px solid;
+    background-color: hwb(150 50% 30%);
+    overflow-y: auto;
+}
+
+h2 {
+    margin: 5px;
+    padding: 10px;
+    border-right: black 2px solid;
+}
+
+div {
+    margin: 5px;
+}
+
+p{
+    text-align: justify;
+}
+
+div.texto{
+    padding: 10px;
+}
+
+p::first-letter {
+    float: left;
+    color: hwb(142 0% 60%);
+    font-size: 5rem;
+    font-style: normal;
+    line-height: 3rem; 
+}
+
+img{
+    box-shadow: 4px 4px 4px 4px green;
+}
+
+.fecha{
+    color:green;
+    font-weight: 700;
+}
