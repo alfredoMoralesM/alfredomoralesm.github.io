@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transición de imagen con CSS</title>
+    <style>
+        /* Estilos básicos para la imagen */
+        .boton {
+            border-radius: 50px;
+            margin: 10px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            width: 150px; /* Ancho inicial */
+            transition: width 0.5s; /* Transición suave */
+            border: 1px solid black;
+            background-color: blue;
+            color: white;
+            font-family: verdana;
+            font-size: 20px;
+            text-decoration: none;
+            box-shadow: 3px 3px orange;
+        }
+
+        /* Cambio de tamaño al hacer hover */
+        .boton:hover {
+            border: 3px solid rgb(255, 153, 0);
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            height: 50px;
+            width: 200px;
+            transition: width 0.8s;
+            text-decoration: none;
+        }
+        
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Transición de imagen con CSS</h1>
+
+    <div class="boton">
+       <a href="https://www.upslp.edu.mx/upslp/?page_id=2704" > Nosotros</a>
+    </div>
+
+    <div class="boton">
+        <a href="https://www.upslp.edu.mx/upslp/?page_id=244"> Aspirantes</a>
+    </div>
+
+    <div class="boton">
+        <a href="https://www.upslp.edu.mx/upslp/?page_id=209"> Estudiantes</a>
+    </div>
+
+    <div class="boton">
+        <a href="https://www.upslp.edu.mx/upslp/?page_id=231"> Docentes</a>
+    </div>
+
+    <div class="boton">
+        <a href="https://www.upslp.edu.mx/upslp/?page_id=241"> Egresados</a>
+    </div>
+
+    <div class="boton">
+        <a href="https://www.upslp.edu.mx/upslp/?page_id=10971"> Contacto</a>
+    </div>
+
+</body>
+</html>
