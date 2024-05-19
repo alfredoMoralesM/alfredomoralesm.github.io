@@ -1,0 +1,67 @@
+
+body{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     
+}
+
+.contenedor{
+    margin: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo{
+    background-color: black;
+    padding: 20px;
+    font-size: 2rem;
+    color: white;
+    border-radius: 10px;
+}
+
+.generador{
+    margin-bottom: 20px;
+    display: flex;
+    background-color: grey;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cajas{
+    color: white;
+    margin:20px;
+}
+
+#caja2, #caja1{
+    margin:30px;
+}
+
+.boton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.todo{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#infoContainer{
+    color: white;
+}
+
+.iframe{
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
