@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Enter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #contador {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Turno</h1>
+
+    <form id="myform" onsubmit="return alertName();">
+        <p>Ingresa el número de ticket: <input id="numero" name="numero" type="number" /></p>
+        <p><input type="submit" value="Iniciar contador" /></p>
+    </form>
+    
+    <p id="contador">Número de ticket actual: 0</p>
+    
+    <script>
+        let contador = 0; // Inicializamos el contador por defecto en 0
+        const contadorElemento = document.getElementById('contador');
+    
+        function alertName() {
+            // Capturamos el valor ingresado en el formulario y lo convertimos en número
+            contador = parseInt(document.forms[0].numero.value);
+            if (isNaN(contador)) {
+                contador = 0; // Si no se ingresa un número válido, el contador comienza en 0
+            }
+            
+            actualizarContador(); // Actualizamos el contador en el HTML
+            return false; // Prevenimos el comportamiento por defecto del formulario
+        }
+    
+        // Función para actualizar el contador en el HTML
+        function actualizarContador() {
+            contadorElemento.textContent = `Número de Enter presionados: ${contador}`;
+        }
+    
+        // Añadimos un escuchador de eventos para detectar cuando se presiona una tecla
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                contador++;
+                actualizarContador(); // Actualizamos el contador en la página
+            }
+        });
+    </script>
+</body>
+</html>
