@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'cursiva';
+    src: url(italianno-v7-latin-regular.woff2)  format('woff2'),
+}
+
+body{
+    background-image: url(fondo-250.jpg);
+}
+
+
+.info{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+}
+
+.titulos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo1{
+    margin: 50px 0 0 0 ;
+    display: block;
+    font-family: sans-serif;
+    color: #9691e8;
+    font-weight: bold;   
+    text-transform: uppercase;
+    font-size: 60px;
+    background-color: white;
+}
+
+.titulo2{
+    margin: 5px 0 30px 0 ;
+    display:inline-block;
+    font-family: sans-serif;
+    color: #9691e8;
+    font-weight: bold;   
+    text-transform: uppercase;
+    font-size: 60px;
+    background-color: white;
+}
+
+.aut{
+    font-weight: bold;   
+}
+
+.shak{
+    padding: 10px;
+    background-color: #9691e8 !important;
+    font-family: Arial;
+    text-align: justify;
+    font-weight: bold;
+    line-height: 50px;
+    letter-spacing: 1.4px;
+    font-size: 20px;
+    max-width: 600px;
+}
+
+.texto-izq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    padding: 5px 15px 5px 5px;
+    min-height: 80vh; /* Ejemplo de una altura fija */
+}
+
+.texto-medio{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /**alinear de forma horizontal la columna*/
+
+}
+
+.texto-der{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    padding: 5px 5px 5px 15px;
+    min-height: 80vh; /* Ejemplo de una altura fija */
+}
+
+.bandera{
+    padding:20px;
+    margin-bottom: 50px;
+    width: 250px;
+    background-color:#91e4e8;
+    border-style: solid;
+    border-color: black 15px;
+    border-radius: 0px  0px 30px 30px;
+    text-align: justify;
+}
+
+.cursiva{
+    font-family: cursiva;
+    font-size: 40px;
+}
+
+.aut{
+    text-align: end;
+}
+
+#fondo-band1{
+    background-image: url(128150-sparkling-heart.svg);
+    background-repeat: repeat-x;
+    background-size: 60px;
+}
+
+#fondo-band2{
+    background-image: url(128128-skull.svg);
+}
